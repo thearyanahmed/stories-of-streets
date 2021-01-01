@@ -2,10 +2,11 @@
 
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Register;
-use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\User\Index as UserIndex;
 use App\Http\Livewire\Profile;
+use App\Http\Livewire\Welcome;
 
-Route::view('/','welcome');
+Route::get('/',Welcome::class);
 /**
  * Authentication
  */
@@ -15,11 +16,11 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware(['auth:sanctum','verified','set-locale'])->group(function (){
-    Route::get('/users', Dashboard::class)->name('dashboard');
+    Route::get('/users', UserIndex::class)->name('dashboard');
     Route::get('/profile', Profile::class);
 
     Route::name('Users::')->group(function(){
-        Route::get('/users', Dashboard::class)->name('index');
+        Route::get('/users', UserIndex::class)->name('index');
     });
 
 });
