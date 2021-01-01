@@ -5,6 +5,11 @@ use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\User\Index as UserIndex;
 use App\Http\Livewire\Profile;
 use App\Http\Livewire\Welcome;
+use Canvas\Canvas;
+
+Route::get('/test',function(){
+    return Canvas::basePath();
+});
 
 Route::get('/',Welcome::class);
 /**
