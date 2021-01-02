@@ -1,7 +1,5 @@
 <?php
 
-use Canvas\CanvasServiceProvider;
-
 return [
 
     /*
@@ -179,7 +177,6 @@ return [
         App\Providers\CanvasServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
 //        App\Providers\JetstreamServiceProvider::class,
-        CanvasServiceProvider::class,
 
     ],
 

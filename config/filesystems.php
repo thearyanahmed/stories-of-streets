@@ -55,6 +55,13 @@ return [
              'visibility' => 'public',
         ],
 
+        'canvas' => [
+            'driver' => 'local',
+             'root' => storage_path('app/canvas'),
+             'url' => env('APP_URL').'/canvas',
+             'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
@@ -87,6 +94,9 @@ return [
 
     'links' => [
         public_path('avatars') => storage_path('app/avatars'),
+        public_path('images') => storage_path('app/images'),
+        public_path('storage') => storage_path('app/public'),
+
     ],
 
 ];

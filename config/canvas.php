@@ -8,8 +8,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | This is the subdomain where Canvas will be accessible from. If the
-    | setting is null, Canvas will reside under the same domain as the
-    | application. Otherwise, this will be used as the subdomain.
+    | domain is set to null, Canvas will reside under the defined base
+    | path below. Otherwise, this will be used as the subdomain.
     |
     */
 
@@ -20,9 +20,9 @@ return [
     | Base Path
     |--------------------------------------------------------------------------
     |
-    | This is the URI path where Canvas will be accessible from. You are free
-    | to change this path to anything you like. Note that the URI will not
-    | affect the paths of its internal API that aren't exposed to users.
+    | This is the URI where Canvas will be accessible from. If the path
+    | is set to null, Canvas will reside under the same path name as
+    | the application. Otherwise, this is used as the base path.
     |
     */
 
@@ -40,7 +40,7 @@ return [
     */
 
     'middleware' => [
-        'web', 'auth:sanctum'
+        'web',
     ],
 
     /*
@@ -54,9 +54,9 @@ return [
     |
     */
 
-    'storage_disk' => env('CANVAS_STORAGE_DISK', 'local'),
+    'storage_disk' => env('CANVAS_STORAGE_DISK', 'public'),
 
-    'storage_path' => env('CANVAS_STORAGE_PATH', 'public/canvas'),
+    'storage_path' => env('CANVAS_STORAGE_PATH', '/'),
 
     'upload_filesize' => env('CANVAS_UPLOAD_FILESIZE', 3145728),
 
