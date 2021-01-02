@@ -11,7 +11,7 @@ Route::get('/test',function(){
     return Canvas::basePath();
 });
 
-Route::get('/',Welcome::class);
+Route::get('/',Welcome::class)->name('welcome');
 /**
  * Authentication
  */

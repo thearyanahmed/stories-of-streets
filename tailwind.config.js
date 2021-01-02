@@ -12,6 +12,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Popins', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: theme => ({
+                'auth': "url('/img/background/dreamer.svg')",
+                'auth-form' : "linear-gradient(to left bottom, #07bfa6, #16ad9e, #249b94, #308988, #38787a)",
+            }),
         },
     },
 

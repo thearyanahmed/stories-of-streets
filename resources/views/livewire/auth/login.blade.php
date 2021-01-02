@@ -30,10 +30,17 @@
     </form>
 
     <div class="mt-6">
-        <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
-            <a href="/register" class="font-medium text-green-400 hover:text-green-300 focus:outline-none focus:underline transition ease-in-out duration-150">
-                Haven't signed up yet?
-            </a>
-        </p>
+        <div class="flex justify-between">
+            <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
+                <a href="{{ route('register') }}" class="font-medium text-green-400 hover:text-green-300 focus:outline-none focus:underline transition ease-in-out duration-150">
+                    Haven't signed up yet?
+                </a>
+            </p>
+            <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
+                <a href="{{ route('password.request') }}" class="font-medium text-green-400 hover:text-green-300 focus:outline-none focus:underline transition ease-in-out duration-150">
+                    Forgot your password?
+                </a>
+            </p>
+        </div>
     </div>
 </div>

@@ -20,10 +20,10 @@
                 </button>
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex-shrink-0 flex items-center">
+                <a href="{{ route('welcome') }}" class="flex-shrink-0 flex items-center">
                     <img class="block lg:hidden h-8 w-auto" src="{{ asset('img/logo/stories_of_streets_1500_500.png') }}" alt="{{ config('app.name') }}">
                     <img class="hidden lg:block h-8 w-auto" src="{{ asset('img/logo/stories_of_streets_1500_500.png') }}" alt="{{ config('app.name') }}">
-                </div>
+                </a>
                 <div class="hidden md:block sm:ml-20 md:w-full md:flex md:justify-center">
                     <div class="flex space-x-4">
                         @include('layouts.partials.user.navbar-menu-items')

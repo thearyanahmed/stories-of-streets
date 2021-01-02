@@ -1,10 +1,10 @@
 <div>
     <form wire:submit.prevent="register" action="#" method="POST">
         <div class="text-center">
-            <span class="font-semibold text-white">Join us</span>
+            <span class="font-semibold sm:text-black md:text-white">Join us</span>
         </div>
         <div>
-            <label for="name" class="block text-sm font-medium leading-5 text-white">
+            <label for="name" class="block text-sm font-medium leading-5 sm:text-black md:sm:text-black md:text-white">
                 Name
             </label>
             <div class="mt-1 rounded-md shadow-sm">
@@ -13,7 +13,7 @@
             @error('name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
         <div class="mt-3">
-            <label for="email" class="block text-sm font-medium leading-5 text-white">
+            <label for="email" class="block text-sm font-medium leading-5 sm:text-black md:text-white">
                 Email address
             </label>
             <div class="mt-1 rounded-md shadow-sm">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="mt-3" x-data="{ showPassword: false }">
-            <label for="password" class="block text-sm font-medium leading-5 text-white">
+            <label for="password" class="block text-sm font-medium leading-5 sm:text-black md:text-white">
                 Password <span class="cursor-pointer" @click="showPassword = !showPassword">(
                     <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
                     )</span>
@@ -36,7 +36,7 @@
 
         <div class="mt-6">
             <span class="block w-full rounded-md shadow-sm">
-                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-400 hover:bg-green-300 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md sm:text-black md:text-white bg-green-400 hover:bg-green-300 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
                     Register
                 </button>
             </span>
