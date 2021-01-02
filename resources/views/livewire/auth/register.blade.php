@@ -1,32 +1,35 @@
 <div>
     <form wire:submit.prevent="register" action="#" method="POST">
+        <div class="text-center">
+            <span class="font-semibold text-white">Join us</span>
+        </div>
         <div>
-            <label for="name" class="block text-sm font-medium leading-5 text-gray-700">
+            <label for="name" class="block text-sm font-medium leading-5 text-white">
                 Name
             </label>
             <div class="mt-1 rounded-md shadow-sm">
-                <input wire:model="name" id="name" type="text" required autofocus class="@error('name') border-red-500 @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-green focus:border-green-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                <input wire:model="name" placeholder="{{ $dummy['name'] }}" id="name" type="text" required autofocus class="@error('name') border-red-500 @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-green focus:border-green-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
             </div>
             @error('name') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
         <div class="mt-3">
-            <label for="email" class="block text-sm font-medium leading-5 text-gray-700">
+            <label for="email" class="block text-sm font-medium leading-5 text-white">
                 Email address
             </label>
             <div class="mt-1 rounded-md shadow-sm">
-                <input wire:model="email" id="email" type="email" autofocus class="@error('email') border-red-500 @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-green focus:border-green-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                <input wire:model="email" id="email" placeholder="{{ $dummy['email'] }}" type="email" autofocus class="@error('email') border-red-500 @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-green focus:border-green-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
             </div>
             @error('email') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="mt-3" x-data="{ showPassword: false }">
-            <label for="password" class="block text-sm font-medium leading-5 text-gray-700">
+            <label for="password" class="block text-sm font-medium leading-5 text-white">
                 Password <span class="cursor-pointer" @click="showPassword = !showPassword">(
                     <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
                     )</span>
             </label>
             <div class="mt-1 rounded-md shadow-sm">
-                <input wire:model.lazy="password" id="password" :type="showPassword ? 'text' : 'password'" required class="@error('password') border-red-500 @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-green focus:border-green-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                <input wire:model.lazy="password" placeholder="******" id="password" :type="showPassword ? 'text' : 'password'" required class="@error('password') border-red-500 @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-green focus:border-green-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
             </div>
             @error('password') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>

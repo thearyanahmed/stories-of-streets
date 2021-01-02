@@ -14,11 +14,30 @@ class Register extends Component
     public $role      = null;
     public $device_id = null;
 
+    private $dummies = [
+        [
+            'name' => 'Albert Einstein',
+            'email' => 'email@relative.is',
+        ],
+        [
+            'name' => 'Master Yoda',
+            'email' => 'gmail@youremail.com',
+        ],
+        [
+            'name' => 'Elon Musk',
+            'email' => 'falconheavy@spacex.com',
+        ],
+    ];
+
+    public $dummy = [];
+
     public function mount()
     {
         $this->device_id = unique_device_id();
 
         $this->role = User::CONTRIBUTOR;
+
+        $this->dummy = $this->dummies[mt_rand(0,2)];
     }
 
     public function rules()

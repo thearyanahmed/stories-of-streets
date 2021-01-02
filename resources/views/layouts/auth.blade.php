@@ -1,13 +1,17 @@
 <x-layouts.base>
-    <div class="min-h-screen bg-gray-50 flex flex-col justify-center pt-6 sm:px-6 lg:px-8">
-        <div class="mx-auto">
-            <img src="{{ asset('img/logo/base_logo_bg_transparent.svg') }}" style="width: 200px;" alt="{{ config('app.name') }}">
-        </div>
+    <div class="min-h-screen bg-white flex flex-col justify-center pt-6 sm:px-6 lg:px-8">
 
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                {{ $slot }}
+        @include('layouts.partials.user.navbar')
+
+        <div class="w-full h-screen items-center" style="background-image: url('{{ asset('img/background/dreamer.svg') }}');background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /">
+            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md md:mx-20 md:my-64">
+                <div class=" py-8 px-4 sm:rounded-lg sm:px-10" style="background-image: linear-gradient(to left bottom, #07bfa6, #16ad9e, #249b94, #308988, #38787a);">
+                    {{ $slot }}
+                </div>
             </div>
         </div>
+{{--        {{ $slot }}--}}
     </div>
 </x-layouts.base>
