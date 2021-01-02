@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db0dedb842545bc99586aeb8c7ae9b04",
+    "content-hash": "4d675ece367d2722d83dd5d8c7189c3a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2861,6 +2861,71 @@
                 }
             ],
             "time": "2020-09-11T19:18:05+00:00"
+        },
+        {
+            "name": "prophecy/canvas",
+            "version": "v6.0.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thearyanahmed/canvas.git",
+                "reference": "976fe4d5beb98849691f7d568bdfceafdc21f5bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thearyanahmed/canvas/zipball/976fe4d5beb98849691f7d568bdfceafdc21f5bb",
+                "reference": "976fe4d5beb98849691f7d568bdfceafdc21f5bb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": "^6.0|^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "laravel/legacy-factories": "^1.0",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Canvas\\CanvasServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Canvas\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Todd Austin",
+                    "email": "austin.todd.j@gmail.com"
+                }
+            ],
+            "description": "A Laravel publishing platform",
+            "homepage": "https://trycanvas.app",
+            "keywords": [
+                "blog",
+                "canvas",
+                "laravel",
+                "platform",
+                "publishing"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/austintoddj",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-27T18:52:57+00:00"
         },
         {
             "name": "psr/container",
