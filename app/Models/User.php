@@ -92,7 +92,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $appends = [
-        'profile_photo_url',
+        'avatar'
     ];
 
     // user roles
@@ -137,11 +137,9 @@ class User extends Authenticatable
         });
     }
 
-    public function avatarUrl()
+    public function getAvatarAttribute()
     {
-        return $this->avatar
-            ? Storage::disk('avatars')->url($this->avatar)
-            : 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email))) . '?d=identicon';
+        return $this->getProfilePhotoUrlAttribute();
     }
 
     public function verified()

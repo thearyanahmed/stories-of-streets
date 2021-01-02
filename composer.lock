@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98b1e3c11a24083a1c5b7715607e873b",
+    "content-hash": "a5e6821ac907184869108df9ce21e162",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2864,16 +2864,16 @@
         },
         {
             "name": "prophecy/canvas",
-            "version": "7.3.0",
+            "version": "7.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thearyanahmed/canvas.git",
-                "reference": "f5cde5e30724ab268a844e6efcc351b7303f7199"
+                "reference": "39c9b1cce8dbbb0e9a689184862a6dcfc05e8d60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thearyanahmed/canvas/zipball/f5cde5e30724ab268a844e6efcc351b7303f7199",
-                "reference": "f5cde5e30724ab268a844e6efcc351b7303f7199",
+                "url": "https://api.github.com/repos/thearyanahmed/canvas/zipball/39c9b1cce8dbbb0e9a689184862a6dcfc05e8d60",
+                "reference": "39c9b1cce8dbbb0e9a689184862a6dcfc05e8d60",
                 "shasum": ""
             },
             "require": {
@@ -2925,7 +2925,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-02T13:47:24+00:00"
+            "time": "2021-01-02T14:45:23+00:00"
         },
         {
             "name": "psr/container",

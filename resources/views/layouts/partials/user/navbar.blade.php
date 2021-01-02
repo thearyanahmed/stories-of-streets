@@ -45,7 +45,7 @@
                     @if(auth()->check())
                         <div>
                             <button @click="showDropdown = true" class="bg-white flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-haspopup="true">
-                                <img class="h-8 w-8 rounded-full" src="{{ auth()->user()->avatarUrl() }}" alt="{{ auth()->user()->name }}">
+                                <img class="h-8 w-8 rounded-full" src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->name }}">
                             </button>
                         </div>
                         <div @click.away="showDropdown = false"
