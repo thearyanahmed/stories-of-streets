@@ -54,7 +54,7 @@
     <div class="flex flex-col w-64 border-r border-gray-200 bg-gray-800">
         <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
             <div class="flex items-center flex-shrink-0 px-4">
-                <img class="w-auto" src="{{ asset('img/logo/base_logo_bg_transparent_text_white_200x101.svg') }}" alt="Farmland">
+                <img class="w-auto" src="{{ asset('img/logo/base_logo_bg_transparent_text_white_200x101.svg') }}" alt="{{ config('app.name') }}">
 {{--                <span class="text-3xl font-medium text-white">Farmland</span>--}}
             </div>
             <!-- Sidebar component, swap this element with another sidebar if you like -->

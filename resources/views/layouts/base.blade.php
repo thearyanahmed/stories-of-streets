@@ -16,6 +16,8 @@
 {{--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">--}}
 {{--    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@1.2.3/dist/trix.css">--}}
 
+    @yield('styles')
+
 </head>
 <body class="antialiased font-sans bg-white">
     {{ $slot }}

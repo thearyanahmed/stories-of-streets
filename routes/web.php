@@ -1,15 +1,14 @@
 <?php
 
+use App\Http\Controllers\Auth\Social\Google;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\User\Index as UserIndex;
 use App\Http\Livewire\Profile;
 use App\Http\Livewire\Welcome;
-use Canvas\Canvas;
 
-Route::get('/test',function(){
-    return Canvas::basePath();
-});
+Route::get('/redirect', [Google::class,'redirect'])->name('google.redirect');
+Route::get('/callback', [Google::class,'callback']);
 
 Route::get('/',Welcome::class)->name('welcome');
 /**

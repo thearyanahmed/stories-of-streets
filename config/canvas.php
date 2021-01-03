@@ -45,7 +45,7 @@ return [
 
     'auth_guard' => 'web',
 
-
+    'logo' => env('APP_URL') . '/img/logo/stories_of_streets_1500_500.png',
     /*
     |--------------------------------------------------------------------------
     | Storage

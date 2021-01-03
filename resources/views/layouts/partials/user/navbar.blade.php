@@ -59,7 +59,7 @@
                              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                             <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
                             <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                            <a href="#" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                            <a href="{{ route('canvas.logout') }}" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
                         </div>
                     @else
                         <a @click="showAuthDropdown = true" href="#" class="md:hidden bg-white p-1 rounded-full text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-haspopup="true">
