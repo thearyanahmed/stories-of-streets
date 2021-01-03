@@ -21,7 +21,7 @@
 
         <div class="mt-2">
             <div class="sm:flex md:flex justify-between">
-                <a class="sm:w-full md:w-1/2 rounded-md shadow-sm py-2 px-4 flex justify-center text-center bg-white cursor-pointer">
+                <a class="sm:w-full md:w-1/2 rounded-md shadow-sm py-2 px-4 flex justify-center text-center bg-white cursor-pointer sm:border-2 sm:border-gray-200 sm:border-opacity-75 md:border-0">
                     <img class="h-6 bg-white rounded-sm" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="{{ config('app.name') }} - Signin with google">
                     <span class="ml-1 text-gray-800 text-sm">Login with google</span>
                 </a>
