@@ -1,3 +1,5 @@
-<div class="p-5 mx-auto w-1/2">
-    <img class="w-auto" src="{{ asset('img/logo/stories_of_streets_1024_256.png') }}" alt="{{ config('app.name') }}">
+<div class="w-full md:w-2/6 mx-auto flex flex-col" id="masonry">
+    @foreach($stories as $story)
+        @livewire('story.cards.base', ['story' => $story])
+    @endforeach
 </div>

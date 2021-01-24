@@ -8,4 +8,6 @@
 
         <x-notification />
     </div>
+    @livewire('components.footer')
+
 </x-layouts.base>

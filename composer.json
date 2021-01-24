@@ -21,12 +21,13 @@
         "league/flysystem-aws-s3-v3": "^1.0",
         "livewire/livewire": "^2.0",
         "predis/predis": "^1.1",
-        "prophecy/canvas": "7.8",
+        "prophecy/canvas": "7.8.0",
         "spatie/data-transfer-object": "^2.6",
         "spatie/image-optimizer": "^1.3",
         "spatie/laravel-activitylog": "^3.16",
         "spatie/laravel-medialibrary": "^9.0.0",
-        "spatie/laravel-permission": "^3.18"
+        "spatie/laravel-permission": "^3.18",
+        "spatie/laravel-responsecache": "^6.6"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

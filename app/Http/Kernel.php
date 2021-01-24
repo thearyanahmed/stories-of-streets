@@ -65,5 +65,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
         'set-locale' => SetLocale::class,
+        'cache' => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+
     ];
 }
