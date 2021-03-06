@@ -9,7 +9,7 @@
                         @if ($upload)
                             <img src="{{ $upload->temporaryUrl() }}" alt="Profile Photo">
                         @else
-                            <img src="{{ auth()->user()->avatarUrl() }}" alt="Profile Photo">
+                            <img src="{{ auth()->user()->avatar }}" alt="Profile Photo">
                         @endif
                     </span>
                 </x-input.file-upload>

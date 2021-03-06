@@ -44,7 +44,7 @@
 
         <div class="mt-6">
             <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
-                <a href="/login" class="font-medium text-green-400 hover:text-green-300 focus:outline-none focus:underline transition ease-in-out duration-150">
+                <a href="{{ route('login') }}" class="font-medium text-green-400 hover:text-green-300 focus:outline-none focus:underline transition ease-in-out duration-150">
                     Already Have An Account?
                 </a>
             </p>

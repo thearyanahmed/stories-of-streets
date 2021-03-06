@@ -26,3 +26,19 @@ if(! function_exists('unique_device_id')) {
     }
 }
 
+if(! function_exists('settingsURL')) {
+    function settingsURL() {
+        return url('/') . '/' . config('canvas.path') . '/settings';
+    }
+}
+
+
+if(! function_exists('profileEditURL')) {
+    function profileEditURL() {
+        if(auth(config('canvas.auth_guard'))->check() === false) {
+            return null;
+        }
+        return url('/') . '/' . config('canvas.path') . '/users/' . auth(config('canvas.auth_guard'))->user()->id . '/edit';
+    }
+}
+

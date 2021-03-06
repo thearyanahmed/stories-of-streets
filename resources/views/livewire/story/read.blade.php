@@ -1,9 +1,12 @@
+@section('seo')
+    {!! SEO::generate() !!}
+@endsection
 <div class="w-full md:w-4/6 mx-auto flex flex-col">
     <div class="text-2xl md:text-5xl text-center">
         {{ $story->title }}
     </div>
     <div class="text-center mb-4">
-       <span class="text-sm text-gray-400"> {{ optional($story->published_at)->format('jS M, Y') }} | {{ $story->user->name }} </span>
+       <span class="text-sm text-gray-400"> {{ optional($story->published_at)->format('jS M, Y') }} | <a href="{{ route('users.read',$story->user->id) }}" class="text-black">{{ $story->user->name }}</a></span>
     </div>
     <div class="mb-4">
         <img class="min-w-sm rounded mb-4" src={{ $story->featured_image }} />

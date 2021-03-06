@@ -85,7 +85,7 @@
 
                             <x-table.cell>
                             <span href="#" class="inline-flex space-x-2 truncate text-sm leading-5">
-                                <img src="{{ $user->avatarUrl() }}" alt="{{ $user->name }}" class="w-10 h-10 rounded-md">
+                                <img src="{{ $user->avatar }}" alt="{{ $user->name }}" class="w-10 h-10 rounded-md">
                                 <p class="text-cool-gray-600 truncate self-center">
                                     {{ $user->name }}
                                 </p>

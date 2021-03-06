@@ -17,7 +17,7 @@ class Register extends Controller
         return res([
             'success' => true,
             'user' => $user,
-            'token' => $user->createToken($request->device_id,['permissions' => 'will:be:key:value:pair'])->plainTextToken
+//            'token' => $user->createToken($request->device_id,['permissions' => 'will:be:key:value:pair'])->plainTextToken
         ]);
     }
 }

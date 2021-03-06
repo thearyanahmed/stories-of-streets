@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Mail\UserRegistered;
+use Canvas\Models\Post;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -58,7 +59,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role', 'phone', 'username','about','birthday','avatar'
+        'name', 'email', 'password', 'role', 'phone', 'username','about','birthday','avatar', 'summary'
     ];
 
     /**
@@ -164,5 +165,18 @@ class User extends Authenticatable
         $userData = $this->cache();
 
         app()->setLocale($userData['locale'] ?? 'en');
+    }
+
+    public function memberSince()
+    {
+        if(empty($this->created_at))
+            return null;
+
+        return $this->created_at->diffForHumans();
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 }

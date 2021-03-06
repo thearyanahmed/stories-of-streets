@@ -32,7 +32,7 @@ class Index extends Component
     ];
 
     public $roleColorMap = [
-        '1'    => 'red',
+        '1' => 'red',
         '2' => 'indigo',
         '3' => 'green',
     ];

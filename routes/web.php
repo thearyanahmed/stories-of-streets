@@ -17,10 +17,10 @@ Route::get('/callback', [Google::class,'callback']);
  */
 Route::middleware('guest')->group(function () {
     Route::get('/login', Login::class)->name('login');
-    // Route::get('/register', Register::class)->name('register');
+     Route::get('/register', Register::class)->name('register');
 });
 
-Route::middleware(['auth:sanctum','verified','set-locale'])->group(function (){
+Route::middleware(['auth:sanctum','verified'])->group(function (){
     Route::get('/clear-response',function() {
         ResponseCache::clear();
 
@@ -39,5 +39,7 @@ Route::middleware(['auth:sanctum','verified','set-locale'])->group(function (){
 
 // Route::middleware('cache')->group(function(){
     Route::get('/',Welcome::class)->name('welcome');
+    Route::get('/users/{id}',\App\Http\Livewire\User\View::class)->name('users.read');
     Route::get('/{slug}',Read::class)->name('story.read');
+
 // });

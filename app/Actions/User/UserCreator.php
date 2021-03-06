@@ -10,11 +10,11 @@ class UserCreator
     public function create(array $data)
     {
         $data['password'] = \Hash::make($data['password']);
-        $user = User::create($data);
+//        $user = User::create($data);
 
         // log user
 //        activity()->causedBy($user)->log('Registered.');
 
-        return $user;
+        return User::create($data);
     }
 }

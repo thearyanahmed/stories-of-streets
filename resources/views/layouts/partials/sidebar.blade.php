@@ -70,7 +70,7 @@
             <a href="/profile" class="flex-shrink-0 w-full group block">
                 <div class="flex items-center">
                     <div>
-                        <img class="inline-block h-9 w-9 rounded-full" src="{{ auth()->user()->avatarUrl() }}" alt="Profile Photo">
+                        <img class="inline-block h-9 w-9 rounded-full" src="{{ auth()->user()->avatar }}" alt="Profile Photo">
                     </div>
 
                     <div class="ml-3">
